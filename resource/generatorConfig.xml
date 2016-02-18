@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+  
+<generatorConfiguration>  
+ 
+      
+     <classPathEntry	location="F:\cpworkspace\workspace\CodeGenerator\lib\mysql-connector-java-5.1.5.jar"/>
+    <context id="DB2Tables" targetRuntime="MyBatis3">  
+      <commentGenerator>  
+ 
+        <property name="suppressAllComments" value="true" />  
+      </commentGenerator>  
+         
+     
+		<jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://192.168.58.72:3306/oauth"    userId="root" password="111111">
+		</jdbcConnection>
+		
+       
+      <javaTypeResolver >  
+         <property name="forceBigDecimals" value="false" />  
+      </javaTypeResolver>  
+       
+      <javaModelGenerator targetPackage="com.soft.model" targetProject="F:\cpworkspace\workspace\CodeGenerator\src">  
+        
+          <property name="enableSubPackages" value="true" />  
+        
+          <property name="trimStrings" value="true" />  
+      </javaModelGenerator>  
+        
+      <sqlMapGenerator targetPackage="sqlmap"  targetProject="F:\cpworkspace\workspace\CodeGenerator\src\conf">  
+           <property name="enableSubPackages" value="false" />  
+      </sqlMapGenerator>  
+        
+      <javaClientGenerator type="XMLMAPPER" targetPackage="com.soft.mapping"  targetProject="F:\cpworkspace\workspace\CodeGenerator\src">  
+        <property name="enableSubPackages" value="true" />  
+      </javaClientGenerator>
+
+	<table schema="untodo" tableName="oauth_code" domainObjectName="OauthCode"
+		enableCountByExample="false" enableUpdateByExample="false"
+		enableDeleteByExample="false" enableSelectByExample="false"
+		selectByExampleQueryId="false">  
+      </table>  
+    </context>  
+       
+    </generatorConfiguration>  
